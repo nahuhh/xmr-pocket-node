@@ -137,14 +137,14 @@ public class MainActivity extends AppCompatActivity {
         Resources res = getResources();
         //Log.d(TAG, " " + is64bitsProcessor());
 
-        InputStream in_s = res.openRawResource(is64bitsProcessor() ? R.raw.monerod64 : R.raw.monerod32);
+        InputStream in_s = res.openRawResource(is64bitsProcessor() ? R.raw.p2pool64 : R.raw.p2pool32);
         try {
             // read wownerod binary file from the ressource raw folder
             byte[] b = new byte[in_s.available()];
             in_s.read(b);
             String pathName = context.getApplicationInfo().dataDir + "/lib";
 
-            BINARY_PATH = context.getCacheDir().getPath() + "/../monerod";
+            BINARY_PATH = context.getCacheDir().getPath() + "/../p2pool";
 
             // write the file to an android executable location
             OutputStream outputStream = new FileOutputStream(BINARY_PATH);
