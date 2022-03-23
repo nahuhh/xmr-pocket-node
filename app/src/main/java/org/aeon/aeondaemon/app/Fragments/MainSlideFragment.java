@@ -85,7 +85,7 @@ public class MainSlideFragment extends Fragment {
                     } else {
                         builder = new AlertDialog.Builder(context);
                     }
-                    builder.setTitle("monerod")
+                    builder.setTitle("P2Pool")
                             .setMessage(execError)
                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
